@@ -3,150 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Perfil</title>
+    <title>SENAI - Mídia Social</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
+
     <div class="logo">
-        Conecta
+        <img src="insiraaqui" alt="Logo">
     </div>
 
-    <nav class="botoesIniciais">
-        <button id="botaoPublicar">Publicar</button>
-        <button>Início</button>
-        <button>Mensagens</button>
-        <button>Publicações</button>
-        <button>Meu Perfil</button>
-        <button>Configurações</button>
-    </nav>
+    <div class="botoesIniciais">
 
-    <button class="profilepicture1" id="avatarTopo">
-        E
-    </button>
+        <a href="paginaInicial.html">
+            <button id="botao-paginicial">Página Inicial</button>
+        </a>
+
+        <button id="botao-Mensagens">Mensagem</button>
+
+        <button id="botao-publicacoes">Publicações</button>
+
+        <a href="paginaPerfil.html">
+            <button id="botao-meuperfil">Meu Perfil</button>
+        </a>
+
+        <a href="configuracoes-seguranca.html">
+            <button id="botao-configuracoes">Configurações</button>
+        </a>
+
+        <button id="botao-publicar">Publicar</button>
+
+    </div>
+
+    <button class="profilepicture1">N</button>
+
 </header>
 
-<main class="pagina">
+
+<main class="conteudoPrincipal">
 
     <aside class="perfil">
 
-        <div class="foto" id="fotoPerfil">
-            E
+        <div class="quadradoperfil">
+
+            <div class="perfilTopo">
+
+                <div class="perfilfotoP">
+                    N
+                </div>
+
+                <div class="dadosPerfil">
+
+                    <h1>Nome de Perfil</h1>
+
+                    <p>@nomedeusuario</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="informacoesPerfil">
+
+                <h3>Curso q fezzz</h3>
+
+                <p>Insira sua biografia</p>
+
+            </div>
+
+
+            <div class="seguidores">
+
+                <span>67 seguidores</span>
+
+                <span>/</span>
+
+                <span>67 seguindo</span>
+
+            </div>
+
         </div>
-
-        <h1 id="nomePerfil">
-            Nome de Perfil
-        </h1>
-
-        <p class="usuario" id="usuarioPerfil">
-            @nomedeusuario
-        </p>
-
-        <div class="biografia">
-
-            <span id="cursoPerfil">
-                Técnico em Desenvolvimento de Sistemas
-            </span>
-
-            <p id="bioPerfil">
-                Insira sua biografia
-            </p>
-
-        </div>
-
-        <div class="seguidores">
-
-            <span>
-                <b>67</b> seguidores
-            </span>
-
-            <span>/</span>
-
-            <span>
-                <b>67</b> seguindo
-            </span>
-
-        </div>
-
-        <button class="editar" id="btnEditar">
-            Alterar dados
-        </button>
 
     </aside>
 
-    <section class="conteudo">
+
+    <section class="areaCentral">
 
         <div class="curso">
 
-            <h2>
-                Cursos atuais
-            </h2>
+            <h2>Cursos atuais</h2>
 
-            <p>
-                Técnico em desenv. de sistemas
-            </p>
+            <p>Técnico em desenv. de sistemas</p>
 
             <strong>
                 <span id="porcentagem">60</span>% concluído
             </strong>
 
             <div class="barra">
-                <div class="progresso"></div>
+
+                <div
+                    class="progresso"
+                    id="progresso">
+                </div>
+
             </div>
+
+        </div>
+
+
+        <div
+            class="publicacoes"
+            id="publicacoes">
+
+            <article class="publicacao">
+
+                <div class="cabecalhoPublicacao">
+
+                    <div class="fotoPublicacao">
+                        N
+                    </div>
+
+                    <div class="nomePublicacao">
+
+                        <strong>
+                            Nome de Perfil
+                        </strong>
+
+                        <span>
+                            @nomedeusuario
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="textoPublicacao">
+                    moranguete abacatudo six seven quatu dois
+                </p>
+
+
+                <div class="imagemPublicacao">
+
+                    <span>
+                        Prévia da publicação
+                    </span>
+
+                </div>
+
+
+                <div class="acoes">
+
+                    <button class="botaoLike">
+                        ♡
+                    </button>
+
+                    <span class="numeroLikes">
+                        67 likes
+                    </span>
+
+                </div>
+
+
+                <div class="comentarios">
+
+                    <div class="listaComentarios">
+
+                    </div>
+
+
+                    <form class="formComentario">
+
+                        <input
+                            type="text"
+                            class="inputComentario"
+                            placeholder="Escreva um comentário..."
+                            maxlength="150"
+                            required>
+
+                        <button type="submit">
+                            Enviar
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </article>
 
         </div>
 
     </section>
 
+
     <div class="forma"></div>
 
 </main>
 
-<div class="modal escondido" id="modal">
 
-    <div class="caixa-modal">
+<div
+    class="modal"
+    id="modalPublicacao">
 
-        <button class="fechar" id="fecharModal">
+    <div class="caixaModal">
+
+        <button
+            class="fecharModal"
+            id="fecharModal">
             ×
         </button>
 
+
         <h2>
-            Alterar dados
+            Nova publicação
         </h2>
 
-        <form id="formPerfil">
 
-            <label>
-                Nome
-                <input id="inputNome" type="text" required>
-            </label>
+        <textarea
+            id="textoNovaPublicacao"
+            placeholder="O que você quer compartilhar?"
+            maxlength="500">
+        </textarea>
 
-            <label>
-                Usuário
-                <input id="inputUsuario" type="text" required>
-            </label>
 
-            <label>
-                Curso
-                <input id="inputCurso" type="text" required>
-            </label>
+        <label class="botaoArquivo">
 
-            <label>
-                Biografia
-                <textarea id="inputBio" rows="3"></textarea>
-            </label>
+            Escolher foto ou vídeo
 
-            <button class="salvar" type="submit">
-                Salvar alterações
-            </button>
+            <input
+                type="file"
+                id="arquivoPublicacao"
+                accept="image/*,video/*">
 
-        </form>
+        </label>
+
+
+        <div id="previewArquivo"></div>
+
+
+        <button
+            class="enviarPublicacao"
+            id="enviarPublicacao">
+            Publicar
+        </button>
 
     </div>
 
 </div>
+
 
 <script src="script.js"></script>
 
