@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        Conecta
+    </div>
+
+    <nav class="botoesIniciais">
+        <button id="botaoPublicar">Publicar</button>
+        <button>Início</button>
+        <button>Mensagens</button>
+        <button>Publicações</button>
+        <button>Meu Perfil</button>
+        <button>Configurações</button>
+    </nav>
+
+    <button class="profilepicture1" id="avatarTopo">
+        E
+    </button>
+</header>
+
+<main class="pagina">
+
+    <aside class="perfil">
+
+        <div class="foto" id="fotoPerfil">
+            E
+        </div>
+
+        <h1 id="nomePerfil">
+            Nome de Perfil
+        </h1>
+
+        <p class="usuario" id="usuarioPerfil">
+            @nomedeusuario
+        </p>
+
+        <div class="biografia">
+
+            <span id="cursoPerfil">
+                Técnico em Desenvolvimento de Sistemas
+            </span>
+
+            <p id="bioPerfil">
+                Insira sua biografia
+            </p>
+
+        </div>
+
+        <div class="seguidores">
+
+            <span>
+                <b>67</b> seguidores
+            </span>
+
+            <span>/</span>
+
+            <span>
+                <b>67</b> seguindo
+            </span>
+
+        </div>
+
+        <button class="editar" id="btnEditar">
+            Alterar dados
+        </button>
+
+    </aside>
+
+    <section class="conteudo">
+
+        <div class="curso">
+
+            <h2>
+                Cursos atuais
+            </h2>
+
+            <p>
+                Técnico em desenv. de sistemas
+            </p>
+
+            <strong>
+                <span id="porcentagem">60</span>% concluído
+            </strong>
+
+            <div class="barra">
+                <div class="progresso"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="forma"></div>
+
+</main>
+
+<div class="modal escondido" id="modal">
+
+    <div class="caixa-modal">
+
+        <button class="fechar" id="fecharModal">
+            ×
+        </button>
+
+        <h2>
+            Alterar dados
+        </h2>
+
+        <form id="formPerfil">
+
+            <label>
+                Nome
+                <input id="inputNome" type="text" required>
+            </label>
+
+            <label>
+                Usuário
+                <input id="inputUsuario" type="text" required>
+            </label>
+
+            <label>
+                Curso
+                <input id="inputCurso" type="text" required>
+            </label>
+
+            <label>
+                Biografia
+                <textarea id="inputBio" rows="3"></textarea>
+            </label>
+
+            <button class="salvar" type="submit">
+                Salvar alterações
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

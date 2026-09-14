@@ -1,0 +1,348 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eeeeee;
+    margin: 0;
+    color: #222222;
+}
+
+header {
+    background-color: #cfcfcf;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95px;
+    border-bottom: 1px solid #999999;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 10;
+}
+
+.logo {
+    width: 150px;
+    height: 55px;
+    background-color: #888888;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.botoesIniciais {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background-color: #777777;
+        border-radius: 60px;
+        padding: 6px 10px;
+        margin: 0 auto;
+    
+}
+
+.botoesIniciais button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 7px 8px;
+}
+
+.botoesIniciais button:hover {
+    color: #dddddd;
+}
+
+#botaoPublicar {
+    background-color: #eeeeee;
+    color: #333333;
+    border-radius: 50px;
+    padding: 8px 18px;
+}
+
+#botaoPublicar:hover {
+    background-color: #dddddd;
+}
+
+.profilepicture1 {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #777777;
+    color: white;
+    border: 2px solid #444444;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.pagina {
+    width: 1225px;
+    max-width: 95%;
+    min-height: 720px;
+    margin: 0 auto;
+    padding: 120px 28px 40px;
+    display: grid;
+    grid-template-columns: 248px 455px;
+    gap: 72px;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.perfil {
+    background: white;
+    border-radius: 10px;
+    padding: 22px 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px #aaaaaa;
+    z-index: 2;
+    min-height: 548px;
+}
+
+.foto {
+    width: 145px;
+    height: 145px;
+    margin: 0 auto 22px;
+    border-radius: 48%;
+    background: #c5c5c5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.perfil h1 {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.usuario {
+    color: #777777;
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.biografia {
+    margin-top: 35px;
+    text-align: left;
+    padding-left: 39px;
+}
+
+.biografia span {
+    color: #777777;
+    font-size: 19px;
+}
+
+.biografia p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.seguidores {
+    margin-top: 58px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.seguidores b {
+    font-weight: normal;
+}
+
+.editar {
+    width: 90%;
+    height: 42px;
+    margin-top: 68px;
+    border: 1px solid #dddddd;
+    border-radius: 22px;
+    background: #f7f7f7;
+    color: #777777;
+    cursor: pointer;
+}
+
+.editar:hover {
+    background: #dddddd;
+}
+
+.conteudo {
+    width: 455px;
+    position: relative;
+    z-index: 2;
+}
+
+.curso {
+    width: 386px;
+    margin: 0 auto;
+    padding: 15px 20px 18px;
+    text-align: center;
+    color: white;
+    background: #777777;
+    border-radius: 32px;
+}
+
+.curso h2 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.curso p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.curso strong {
+    font-size: 14px;
+}
+
+.barra {
+    width: 100px;
+    height: 18px;
+    margin: 7px auto 0;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progresso {
+    width: 60%;
+    height: 100%;
+    background: #bdbdbd;
+    border-radius: 20px;
+}
+
+.forma {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -310px;
+    bottom: -360px;
+    background: #bdbdbd;
+    transform: rotate(-45deg);
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.escondido {
+    display: none;
+}
+
+.caixa-modal {
+    width: 430px;
+    max-width: 90%;
+    background: white;
+    border-radius: 16px;
+    padding: 26px;
+    position: relative;
+    box-shadow: 0 10px 35px #333333;
+}
+
+.fechar {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.caixa-modal h2 {
+    margin-bottom: 18px;
+}
+
+.caixa-modal label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+.caixa-modal input,
+.caixa-modal textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    border: 1px solid #bbbbbb;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.salvar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 9px;
+    background: #777777;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .botoesIniciais {
+        gap: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .botoesIniciais button {
+        display: none;
+    }
+
+    #botaoPublicar {
+        display: block;
+    }
+
+    .pagina {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    .curso {
+        width: 100%;
+    }
+
+    .forma {
+        display: none;
+    }
+}
