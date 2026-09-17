@@ -1,3 +1,4 @@
+// Pega os elementos do DOM
 const botaoPublicar = document.getElementById("botao-publicar");
 const modalPublicacao = document.getElementById("modalPublicacao");
 const fecharModal = document.getElementById("fecharModal");
@@ -7,12 +8,15 @@ const textoNovaPublicacao = document.getElementById("textoNovaPublicacao");
 const previewArquivo = document.getElementById("previewArquivo");
 const publicacoes = document.getElementById("publicacoes");
 
+// Salva o arquivo atual
 let arquivoSelecionado = null;
 
+// Abre o modal
 botaoPublicar.addEventListener("click", function () {
     modalPublicacao.classList.add("aberto");
 });
 
+// Fecha no X
 fecharModal.addEventListener("click", fecharModalPublicacao);
 
 modalPublicacao.addEventListener("click", function (evento) {
@@ -21,16 +25,19 @@ modalPublicacao.addEventListener("click", function (evento) {
     }
 });
 
+// Trata a imagem/video do input
 arquivoPublicacao.addEventListener("change", function () {
 
     const arquivo = arquivoPublicacao.files[0];
 
+    // Se nao tiver arquivo limpa a previa
     if (!arquivo) {
         arquivoSelecionado = null;
         previewArquivo.innerHTML = "";
         return;
     }
 
+    // Aceita so foto ou video
     if (
         arquivo.type.startsWith("image/") ||
         arquivo.type.startsWith("video/")
@@ -38,6 +45,7 @@ arquivoPublicacao.addEventListener("change", function () {
 
         arquivoSelecionado = arquivo;
 
+        // URL temporaria pra carregar no img/video
         const url = URL.createObjectURL(arquivo);
 
         if (arquivo.type.startsWith("image/")) {
@@ -60,10 +68,12 @@ arquivoPublicacao.addEventListener("change", function () {
     }
 });
 
+// Dispara a criacao do post
 enviarPublicacao.addEventListener("click", function () {
 
     const texto = textoNovaPublicacao.value.trim();
 
+    // Validacao simples
     if (texto === "" && arquivoSelecionado === null) {
         alert("Escreva algo ou escolha uma foto ou vídeo.");
         return;
@@ -74,6 +84,7 @@ enviarPublicacao.addEventListener("click", function () {
     fecharModalPublicacao();
 });
 
+// Monta o HTML do post dinamico
 function criarPublicacao(texto, arquivo) {
 
     const publicacao = document.createElement("article");
@@ -115,6 +126,7 @@ function criarPublicacao(texto, arquivo) {
             `;
     }
 
+    // Injeta a estrutura
     publicacao.innerHTML =
         `
         <div class="cabecalhoPublicacao">
@@ -177,13 +189,16 @@ function criarPublicacao(texto, arquivo) {
         </div>
         `;
 
+    // Adiciona no topo do feed
     publicacoes.prepend(publicacao);
 
+    // Amarra os eventos de like e comentario no post novo
     configurarLike(publicacao);
 
     configurarComentario(publicacao);
 }
 
+// Lógica de like/descurtir
 function configurarLike(publicacao) {
 
     const botaoLike = publicacao.querySelector(".botaoLike");
@@ -215,6 +230,7 @@ function configurarLike(publicacao) {
     });
 }
 
+// Injeta o comentario na div
 function configurarComentario(publicacao) {
 
     const formulario = publicacao.querySelector(".formComentario");
@@ -223,6 +239,7 @@ function configurarComentario(publicacao) {
 
     formulario.addEventListener("submit", function (evento) {
 
+        // Para o reload do form
         evento.preventDefault();
 
         const texto = input.value.trim();
@@ -250,6 +267,7 @@ function configurarComentario(publicacao) {
     });
 }
 
+// Reseta o form do modal
 function fecharModalPublicacao() {
 
     modalPublicacao.classList.remove("aberto");
@@ -263,6 +281,7 @@ function fecharModalPublicacao() {
     arquivoSelecionado = null;
 }
 
+// Aplica pro post que ja vem estatico no HTML
 const publicacaoInicial =
     document.querySelector(".publicacao");
 

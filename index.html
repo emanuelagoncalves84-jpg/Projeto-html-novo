@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SENAI - Mídia Social</title>
+    <!-- Arquivo de estilo visual do site -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- Barra de navegacao no topo da pagina -->
 <header>
 
+    <!-- Espaco da foto da logo -->
     <div class="logo">
         <img src="insiraaqui" alt="Logo">
     </div>
 
+    <!-- Botoes do menu principal -->
     <div class="botoesIniciais">
 
         <a href="paginaInicial.html">
@@ -33,21 +37,26 @@
             <button id="botao-configuracoes">Configurações</button>
         </a>
 
+        <!-- Botao que abre a janela de criar post -->
         <button id="botao-publicar">Publicar</button>
 
     </div>
 
+    <!-- Foto de perfil pequenininha do topo -->
     <button class="profilepicture1">N</button>
 
 </header>
 
 
+<!-- Corpo principal do site -->
 <main class="conteudoPrincipal">
 
+    <!-- Caixa do perfil no lado esquerdo -->
     <aside class="perfil">
 
         <div class="quadradoperfil">
 
+            <!-- Foto, nome e usuario -->
             <div class="perfilTopo">
 
                 <div class="perfilfotoP">
@@ -55,33 +64,23 @@
                 </div>
 
                 <div class="dadosPerfil">
-
                     <h1>Nome de Perfil</h1>
-
                     <p>@nomedeusuario</p>
-
                 </div>
 
             </div>
 
-
+            <!-- Bio e curso do usuario -->
             <div class="informacoesPerfil">
-
                 <h3>Curso q fezzz</h3>
-
                 <p>Insira sua biografia</p>
-
             </div>
 
-
+            <!-- Numero de seguidores e seguindo -->
             <div class="seguidores">
-
                 <span>67 seguidores</span>
-
                 <span>/</span>
-
                 <span>67 seguindo</span>
-
             </div>
 
         </div>
@@ -89,8 +88,10 @@
     </aside>
 
 
+    <!-- Area do meio com o feed e as informacoes -->
     <section class="areaCentral">
 
+        <!-- Card que mostra a barra do curso -->
         <div class="curso">
 
             <h2>Cursos atuais</h2>
@@ -101,24 +102,21 @@
                 <span id="porcentagem">60</span>% concluído
             </strong>
 
+            <!-- Barra cinza com a parte colorida dentro -->
             <div class="barra">
-
-                <div
-                    class="progresso"
-                    id="progresso">
-                </div>
-
+                <div class="progresso" id="progresso"></div>
             </div>
 
         </div>
 
 
-        <div
-            class="publicacoes"
-            id="publicacoes">
+        <!-- Area onde ficam todas as postagens -->
+        <div class="publicacoes" id="publicacoes">
 
+            <!-- Um post do feed -->
             <article class="publicacao">
 
+                <!-- Quem postou -->
                 <div class="cabecalhoPublicacao">
 
                     <div class="fotoPublicacao">
@@ -126,56 +124,36 @@
                     </div>
 
                     <div class="nomePublicacao">
-
-                        <strong>
-                            Nome de Perfil
-                        </strong>
-
-                        <span>
-                            @nomedeusuario
-                        </span>
-
+                        <strong>Nome de Perfil</strong>
+                        <span>@nomedeusuario</span>
                     </div>
 
                 </div>
 
-
+                <!-- Texto do post -->
                 <p class="textoPublicacao">
                     moranguete abacatudo six seven quatu dois
                 </p>
 
-
+                <!-- Foto ou previa do post -->
                 <div class="imagemPublicacao">
-
-                    <span>
-                        Prévia da publicação
-                    </span>
-
+                    <span>Prévia da publicação</span>
                 </div>
 
-
+                <!-- Botao de curtir e contagem -->
                 <div class="acoes">
-
-                    <button class="botaoLike">
-                        ♡
-                    </button>
-
-                    <span class="numeroLikes">
-                        67 likes
-                    </span>
-
+                    <button class="botaoLike">♡</button>
+                    <span class="numeroLikes">67 likes</span>
                 </div>
 
-
+                <!-- Parte dos comentarios -->
                 <div class="comentarios">
 
-                    <div class="listaComentarios">
+                    <!-- Onde os comentarios digitados vao aparecer -->
+                    <div class="listaComentarios"></div>
 
-                    </div>
-
-
+                    <!-- Campo para digitar um novo comentario -->
                     <form class="formComentario">
-
                         <input
                             type="text"
                             class="inputComentario"
@@ -183,10 +161,7 @@
                             maxlength="150"
                             required>
 
-                        <button type="submit">
-                            Enviar
-                        </button>
-
+                        <button type="submit">Enviar</button>
                     </form>
 
                 </div>
@@ -198,54 +173,43 @@
     </section>
 
 
+    <!-- Elemento para enfeite ou ajuste de layout -->
     <div class="forma"></div>
 
 </main>
 
 
-<div
-    class="modal"
-    id="modalPublicacao">
+<!-- Janela popup que abre quando clica no botao "Publicar" -->
+<div class="modal" id="modalPublicacao">
 
     <div class="caixaModal">
 
-        <button
-            class="fecharModal"
-            id="fecharModal">
-            ×
-        </button>
+        <!-- Botao X de fechar a janela -->
+        <button class="fecharModal" id="fecharModal">×</button>
 
+        <h2>Nova publicação</h2>
 
-        <h2>
-            Nova publicação
-        </h2>
-
-
+        <!-- Espaco para escrever o post -->
         <textarea
             id="textoNovaPublicacao"
             placeholder="O que você quer compartilhar?"
             maxlength="500">
         </textarea>
 
-
+        <!-- Botao para enviar foto ou video -->
         <label class="botaoArquivo">
-
             Escolher foto ou vídeo
-
             <input
                 type="file"
                 id="arquivoPublicacao"
                 accept="image/*,video/*">
-
         </label>
 
-
+        <!-- Mostra a foto antes de postar -->
         <div id="previewArquivo"></div>
 
-
-        <button
-            class="enviarPublicacao"
-            id="enviarPublicacao">
+        <!-- Botao final de publicar -->
+        <button class="enviarPublicacao" id="enviarPublicacao">
             Publicar
         </button>
 
@@ -253,7 +217,7 @@
 
 </div>
 
-
+<!-- Ligacao com o script JavaScript -->
 <script src="script.js"></script>
 
 </body>

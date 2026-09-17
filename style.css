@@ -1,7 +1,9 @@
+/* Reseta o calculo do tamanho dos elementos pra nao desconfigurar as larguras */
 * {
     box-sizing: border-box;
 }
 
+/* Configuracao geral da pagina: fonte, fundo roxo escuro e texto branco */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #322b56;
@@ -9,6 +11,7 @@ body {
     color: white;
 }
 
+/* Barra do topo que fica fixa no topo da tela */
 header {
     background-color: #3c669d;
     position: fixed;
@@ -24,6 +27,7 @@ header {
     z-index: 10;
 }
 
+/* Caixa amarelada onde fica a foto do logo */
 .logo {
     width: 147px;
     height: 96px;
@@ -35,11 +39,13 @@ header {
     overflow: hidden;
 }
 
+/* Ajusta o tamanho da imagem do logo dentro da caixa */
 .logo img {
     max-width: 100%;
     height: 2.5rem;
 }
 
+/* Barra azul escura arredondada que segura os botoes do menu */
 .botoesIniciais {
     display: flex;
     align-items: center;
@@ -52,10 +58,12 @@ header {
     padding: 5px 15px;
 }
 
+/* Tira o sublinhado padrao dos links do menu */
 .botoesIniciais a {
     text-decoration: none;
 }
 
+/* Estilo padrao dos botoes de texto do menu */
 .botoesIniciais button {
     background: transparent;
     border: none;
@@ -66,10 +74,12 @@ header {
     white-space: nowrap;
 }
 
+/* Muda a cor do texto para branco quando passa o mouse por cima */
 .botoesIniciais button:hover {
     color: white;
 }
 
+/* Estilo destacado do botao "Pagina Inicial" */
 #botao-paginicial {
     background-color: #489edd;
     color: #322b56;
@@ -77,6 +87,7 @@ header {
     padding: 9px 20px;
 }
 
+/* Estilo destacado do botao "Publicar" */
 #botao-publicar {
     background-color: #489edd;
     color: #153a84;
@@ -84,6 +95,7 @@ header {
     padding: 9px 16px;
 }
 
+/* Foto redonda do usuario no topo da tela */
 .profilepicture1 {
     border-radius: 50%;
     height: 64px;
@@ -96,6 +108,7 @@ header {
     font-weight: bold;
 }
 
+/* Layout principal dividindo a tela em 3 colunas (Grid) */
 .conteudoPrincipal {
     position: relative;
     min-height: 100vh;
@@ -108,11 +121,13 @@ header {
     overflow: hidden;
 }
 
+/* Garante que o perfil fique acima dos elementos de fundo */
 .perfil {
     position: relative;
     z-index: 2;
 }
 
+/* Card azul do perfil no lado esquerdo */
 .quadradoperfil {
     width: 290px;
     min-height: 545px;
@@ -123,12 +138,14 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
+/* Alinha a foto de perfil do lado do nome */
 .perfilTopo {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
+/* Circulo azul com a letra do perfil */
 .perfilfotoP {
     width: 80px;
     height: 80px;
@@ -143,22 +160,26 @@ header {
     flex-shrink: 0;
 }
 
+/* Estilo do nome no perfil */
 .dadosPerfil h1 {
     font-size: 21px;
     margin: 0 0 5px;
     font-weight: normal;
 }
 
+/* Estilo do @usuario no perfil */
 .dadosPerfil p {
     margin: 0;
     color: #ffe9a6;
     font-size: 15px;
 }
 
+/* Espacamento para a bio e curso do perfil */
 .informacoesPerfil {
     margin-top: 65px;
 }
 
+/* Titulo da bio/curso */
 .informacoesPerfil h3 {
     margin: 0 0 7px;
     color: #ffe9a6;
@@ -166,11 +187,13 @@ header {
     font-weight: normal;
 }
 
+/* Texto da biografia */
 .informacoesPerfil p {
     margin: 0;
     font-size: 18px;
 }
 
+/* Contador de seguidores e seguindo */
 .seguidores {
     display: flex;
     gap: 10px;
@@ -178,16 +201,19 @@ header {
     font-size: 15px;
 }
 
+/* Cor amarela para a barra separadora de seguidores */
 .seguidores span:nth-child(2) {
     color: #ffe9a6;
 }
 
+/* Coluna central do feed */
 .areaCentral {
     position: relative;
     z-index: 3;
     width: 540px;
 }
 
+/* Card com as informacoes do curso atual */
 .curso {
     width: 390px;
     height: 112px;
@@ -199,21 +225,25 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Titulo dentro do card do curso */
 .curso h2 {
     margin: 0;
     font-size: 21px;
 }
 
+/* Nome do curso */
 .curso p {
     margin: 4px 0;
     font-size: 15px;
 }
 
+/* Texto da porcentagem */
 .curso strong {
     display: block;
     font-size: 15px;
 }
 
+/* Fundo branco da barra de progresso */
 .barra {
     width: 100px;
     height: 18px;
@@ -223,6 +253,7 @@ header {
     overflow: hidden;
 }
 
+/* Preenchimento colorido azul-claro da barra de progresso */
 .progresso {
     width: 60%;
     height: 100%;
@@ -231,10 +262,12 @@ header {
     transition: width 0.4s;
 }
 
+/* Lista de publicacoes */
 .publicacoes {
     width: 100%;
 }
 
+/* Card individual de um post no feed */
 .publicacao {
     width: 460px;
     margin: 0 auto 25px;
@@ -245,12 +278,14 @@ header {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* Topo do post com foto e nome de quem postou */
 .cabecalhoPublicacao {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+/* Foto do autor da postagem */
 .fotoPublicacao {
     width: 50px;
     height: 50px;
@@ -263,26 +298,31 @@ header {
     font-weight: bold;
 }
 
+/* Organiza nome e @ um embaixo do outro */
 .nomePublicacao {
     display: flex;
     flex-direction: column;
 }
 
+/* Nome do autor do post */
 .nomePublicacao strong {
     font-size: 17px;
 }
 
+/* @usuario do autor do post */
 .nomePublicacao span {
     color: #ffe9a6;
     font-size: 13px;
     margin-top: 3px;
 }
 
+/* Texto da legenda do post */
 .textoPublicacao {
     margin: 17px 5px 12px;
     font-size: 16px;
 }
 
+/* Caixa que segura a imagem ou video da postagem */
 .imagemPublicacao {
     width: 100%;
     min-height: 220px;
@@ -294,18 +334,21 @@ header {
     overflow: hidden;
 }
 
+/* Ajusta as fotos para caberem sem distorcer */
 .imagemPublicacao img {
     width: 100%;
     max-height: 350px;
     object-fit: cover;
 }
 
+/* Ajusta os videos para caberem no post */
 .imagemPublicacao video {
     width: 100%;
     max-height: 350px;
     object-fit: contain;
 }
 
+/* Area dos botoes de interacao (curtida) */
 .acoes {
     display: flex;
     align-items: center;
@@ -313,6 +356,7 @@ header {
     margin-top: 8px;
 }
 
+/* Botao de coracao para curtir */
 .botaoLike {
     border: none;
     background: transparent;
@@ -323,39 +367,46 @@ header {
     padding: 0;
 }
 
+/* Muda a cor do coracao quando for curtido */
 .botaoLike.curtido {
     color: #ff3d7f;
 }
 
+/* Texto da contagem de likes */
 .numeroLikes {
     color: #ffe9a6;
     font-size: 16px;
 }
 
+/* Bloco da secao de comentarios */
 .comentarios {
     margin-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding-top: 10px;
 }
 
+/* Lista que alinha os comentarios um embaixo do outro */
 .listaComentarios {
     display: flex;
     flex-direction: column;
     gap: 7px;
 }
 
+/* Balaozinho de um comentario individual */
 .comentario {
     background-color: #153a84;
     border-radius: 9px;
     padding: 8px 10px;
 }
 
+/* Nome de quem comentou */
 .comentario strong {
     color: #ffe9a6;
     font-size: 13px;
     display: block;
 }
 
+/* Texto do comentario */
 .comentario span {
     font-size: 14px;
     display: block;
@@ -368,6 +419,7 @@ header {
     margin-top: 10px;
 }
 
+/* Campo de texto de digitação do comentario */
 .inputComentario {
     flex: 1;
     min-width: 0;
@@ -377,6 +429,7 @@ header {
     outline: none;
 }
 
+/* Botao de enviar o comentario */
 .formComentario button {
     border: none;
     border-radius: 20px;
@@ -387,14 +440,17 @@ header {
     cursor: pointer;
 }
 
+/* Muda a cor do botao de enviar comentario ao passar o mouse */
 .formComentario button:hover {
     background-color: #ffe9a6;
 }
 
+/* Borda azul ao clicar dentro da caixa de texto */
 .formComentario input:focus {
     box-shadow: 0 0 0 2px #49a3df;
 }
 
+/* Detalhe visual inclinado (degrade/decoracao) no canto da tela */
 .forma {
     position: absolute;
     width: 750px;
@@ -406,6 +462,7 @@ header {
     z-index: 1;
 }
 
+/* Fundo escuro e transparente que cobre a tela quando o modal abre */
 .modal {
     display: none;
     position: fixed;
@@ -416,10 +473,12 @@ header {
     z-index: 30;
 }
 
+/* Classe ativada via JS para fazer o modal aparecer na tela */
 .modal.aberto {
     display: flex;
 }
 
+/* Caixa central azul do modal de criar post */
 .caixaModal {
     position: relative;
     width: 450px;
@@ -430,11 +489,13 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* Titulo da janela de publicacao */
 .caixaModal h2 {
     margin-top: 0;
     color: #ffe9a6;
 }
 
+/* Botao "X" no canto superior direito para fechar o modal */
 .fecharModal {
     position: absolute;
     right: 15px;
@@ -446,6 +507,7 @@ header {
     cursor: pointer;
 }
 
+/* Caixa de texto grande para escrever a nova publicacao */
 #textoNovaPublicacao {
     width: 100%;
     height: 120px;
@@ -458,6 +520,7 @@ header {
     outline: none;
 }
 
+/* Botao estilizado para escolher arquivo (foto/video) */
 .botaoArquivo {
     display: block;
     margin-top: 15px;
@@ -474,6 +537,7 @@ header {
     display: none;
 }
 
+/* Area que mostra a prévia do arquivo escolhido */
 #previewArquivo {
     margin-top: 15px;
     max-height: 220px;
@@ -481,6 +545,7 @@ header {
     border-radius: 10px;
 }
 
+/* Ajusta a imagem ou video dentro do campo de previa */
 #previewArquivo img,
 #previewArquivo video {
     width: 100%;
@@ -488,6 +553,7 @@ header {
     object-fit: contain;
 }
 
+/* Botao azul para confirmar a publicacao */
 .enviarPublicacao {
     width: 100%;
     margin-top: 15px;
@@ -501,59 +567,72 @@ header {
     cursor: pointer;
 }
 
+/* Efeito ao passar o mouse no botao de publicar */
 .enviarPublicacao:hover {
     background-color: #ffe9a6;
 }
 
+/* Regras de responsividade para telas menores (celulares e tablets) */
 @media (max-width: 950px) {
 
+    /* Diminui a altura da barra do topo */
     header {
         height: 100px;
         padding: 10px;
     }
 
+    /* Esconde o logo em telas pequenas */
     .logo {
         display: none;
     }
 
+    /* Ajusta os botoes do topo para rolarem de lado se nao couberem */
     .botoesIniciais {
         width: auto;
         max-width: 85%;
         overflow-x: auto;
     }
 
+    /* Diminui a fonte dos botoes */
     .botoesIniciais button {
         font-size: 13px;
     }
 
+    /* Muda de colunas (Grid) para blocos empilhados um embaixo do outro */
     .conteudoPrincipal {
         display: block;
         padding: 120px 15px 30px;
     }
 
+    /* Margem para o perfil nao colar no feed */
     .perfil {
         margin-bottom: 25px;
     }
 
+    /* Perfil ocupa 100% da largura da tela no celular */
     .quadradoperfil {
         width: 100%;
         min-height: 300px;
     }
 
+    /* Area central ajusta para 100% no celular */
     .areaCentral {
         width: 100%;
     }
 
+    /* Card do curso ajusta a largura */
     .curso {
         width: 100%;
         max-width: 390px;
     }
 
+    /* Publicacao ajusta a largura no celular */
     .publicacao {
         width: 100%;
         max-width: 460px;
     }
 
+    /* Esconde o detalhe decorativo para nao quebrar a tela no celular */
     .forma {
         display: none;
     }
